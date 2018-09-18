@@ -18,6 +18,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import TextColor from './textcolor/textcolor';
 
 export default class BalloonEditor extends BalloonEditorBase {
 }
@@ -36,6 +37,7 @@ BalloonEditor.builtinPlugins = [
     Strikethrough,
     Underline,
     Alignment,
+    TextColor,
 ];
 
 // Editor configuration.
@@ -48,6 +50,7 @@ BalloonEditor.defaultConfig = {
             'strikethrough',
             '|',
             'fontSize',
+            'textColor',
             'highlight',
             '|',
             'bulletedList',
