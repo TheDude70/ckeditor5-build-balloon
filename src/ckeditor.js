@@ -13,12 +13,12 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import TextColor from './textcolor/textcolor';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-import TextColor from './textcolor/textcolor';
 
 export default class BalloonEditor extends BalloonEditorBase {
 }
@@ -32,12 +32,12 @@ BalloonEditor.builtinPlugins = [
     Heading,
     List,
     Paragraph,
+    TextColor,
     FontSize,
     Highlight,
     Strikethrough,
     Underline,
     Alignment,
-    TextColor,
 ];
 
 // Editor configuration.
@@ -52,7 +52,6 @@ BalloonEditor.defaultConfig = {
             'fontSize',
             'textColor',
             'highlight',
-            '|',
             'bulletedList',
             'numberedList',
             '|',
