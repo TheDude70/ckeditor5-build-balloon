@@ -1,5 +1,7 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
+import {downcastAttributeToElement} from '@ckeditor/ckeditor5-engine/src/conversion/downcast-converters';
+import {upcastElementToAttribute} from '@ckeditor/ckeditor5-engine/src/conversion/upcast-converters';
 import TextColorCommand from './textcolorcommand';
 import Colors from '../colors.js';
 
@@ -50,7 +52,9 @@ function _buildDefinition(options) {
         definition.model.values.push(option.model);
         definition.view[option.model] = {
             name: 'span',
-            classes: option.title.replace(/\s/g, '-').toLowerCase(),
+            styles: {
+                'color': option.model
+            },
             priority: 5
         }
     }
