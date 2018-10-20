@@ -19,6 +19,7 @@ import HighlightColor from 'ckeditor5-custom-highlighter/src/highlightcolor';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import ObsIntApp from 'ckeditor-obs-int-app/src/obsintapp';
 
 export default class BalloonEditor extends BalloonEditorBase {
 }
@@ -38,6 +39,7 @@ BalloonEditor.builtinPlugins = [
     Strikethrough,
     Underline,
     Alignment,
+    ObsIntApp,
 ];
 
 // Editor configuration.
@@ -56,6 +58,8 @@ BalloonEditor.defaultConfig = {
             'numberedList',
             '|',
             'alignment',
+            '|',
+            'obsintappColor',
             '|',
             'undo',
             'redo'
